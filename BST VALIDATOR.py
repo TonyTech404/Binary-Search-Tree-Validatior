@@ -4,36 +4,35 @@ class BinarySearchTree:
         self.left = None
         self.right = None
 
-    # Solution 1
-    # def add_child(self, data):
-    #     if data == self.data:
-    #         return
-    #     if data < self.data:
-    #         if self.left:
-    #             return self.left.add_child(data)
-    #         else:
-    #             self.left = BinarySearchTree(data)
-    #     else:
-    #         if self.right:
-    #             return self.right.add_child(data)
-    #         else:
-    #             self.right = BinarySearchTree(data)
-
-    def tree_root(self, root):
-        def in_order_traversal(root, elements):
-            if root is None:
-                return
-            in_order_traversal(root.left, elements)
-            elements.append(root.data)
-            in_order_traversal(root.right, elements)
-
-        elements = []
-        in_order_traversal(root, elements)
-        print(elements)
-        return elements == sorted(elements)
-
-
-# Solution 1
+#     #Solution 1
+#     def add_child(self, data):
+#         if data == self.data:
+#             return
+#         if data < self.data:
+#             if self.left:
+#                 return self.left.add_child(data)
+#             else:
+#                 self.left = BinarySearchTree(data)
+#         else:
+#             if self.right:
+#                 return self.right.add_child(data)
+#             else:
+#                 self.right = BinarySearchTree(data)
+#
+#     def tree_root(self, root):
+#         def in_order_traversal(root, elements):
+#             if root is None:
+#                 return
+#             in_order_traversal(root.left, elements)
+#             elements.append(root.data)
+#             in_order_traversal(root.right, elements)
+#
+#         elements = []
+#         in_order_traversal(root, elements)
+#         print(elements)
+#         return elements == sorted(elements)
+#
+#
 # def tree_builder(datas):
 #     root = BinarySearchTree(datas[0])
 #     for i in range(1, len(datas)):
@@ -48,8 +47,9 @@ class BinarySearchTree:
 #     if element == 00:
 #         data.pop()
 #         break
-# solution = BinaryChecker()
-# print(solution.tree_root(tree_builder(data)))
+# bst = tree_builder(data)
+# print(bst.tree_root(tree_builder(data)))
+
 
 # Solution 2:
 # #Root
